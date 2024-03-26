@@ -2,13 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Cartstyle.css";
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addToCart,
-  removeToCart,
-  removeSigleItem,
-  emptycartItem,
-} from "../redux/features/cartSlice";
+import {addToCart,removeToCart,removeSigleItem,emptycartItem,} from "../redux/features/cartSlice";
 import {loadStripe} from '@stripe/stripe-js';
+
 
 const CartDetails = () => {
   const [totalprice, setPrice] = useState(0);
@@ -67,7 +63,7 @@ const CartDetails = () => {
 
   // payment integration
   const makePayment = async()=>{
-    const stripe = await loadStripe("pk_test_51OyLh4SFe1RAqoO79NIq5GOjxtUNw9rnDnthKAD0lvc4nGvlj5tqTib4S43huQpNkcEAUzyUwgjTitz9wKvr8HYO00f57yyv1W");
+    const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLICKEY);
 
     const body = {
     products: carts
