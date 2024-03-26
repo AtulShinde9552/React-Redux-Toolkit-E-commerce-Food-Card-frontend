@@ -76,7 +76,7 @@ const CartDetails = () => {
     const headers = {
     "Content-Type": "application/json"
     }
-    const response = await fetch("https://react-redux-toolkit-e-commerce-food-card-backend.vercel.app/api/create-checkout-session",{
+    const response = await fetch("http://localhost:7000/api/create-checkout-session",{
   
     method: "Post",
     headers: headers,
