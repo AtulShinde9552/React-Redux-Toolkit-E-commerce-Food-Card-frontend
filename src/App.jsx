@@ -5,7 +5,7 @@ import CardDetails from "./components/CartDetails"
 import Success from './components/success'
 import Cancel from './components/cancel'
 import {Route, Routes} from "react-router-dom"
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 
 
 const App = () => {
