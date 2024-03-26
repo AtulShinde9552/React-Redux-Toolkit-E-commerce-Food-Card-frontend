@@ -6,6 +6,7 @@ import {addToCart,removeToCart,removeSigleItem,emptycartItem,} from "../redux/fe
 import {loadStripe} from '@stripe/stripe-js';
 
 
+
 const CartDetails = () => {
   const [totalprice, setPrice] = useState(0);
   const [totalquantity, setTotalQuantity] = useState(0);
